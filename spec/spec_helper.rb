@@ -1,0 +1,7 @@
+require 'yandex_usluga'
+require 'bank'
+require 'bank_product'
+require 'credit'
+require 'deposit'
+require 'mortgage'
+require 'autocredit'

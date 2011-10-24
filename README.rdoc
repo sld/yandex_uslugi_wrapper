@@ -1,6 +1,7 @@
 = yandex_uslugi
 
-Description goes here.
+Данный Gem является оберткой над Яндекс Услуги - http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml.
+Предоставляет основные функции поиска по id и по параметрам. 
 
 == Contributing to yandex_uslugi
  
