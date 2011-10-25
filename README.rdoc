@@ -1,10 +1,40 @@
 = yandex_uslugi
 
-Данный Gem является оберткой над Яндекс Услуги - http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml.
-Предоставляет основные функции поиска по id и по параметрам. 
+Данный Gem является оберткой над API Яндекс Услуг - http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml.
+Предоставляет основные функции поиска по id и по параметрам для банковских услуг.
+
+Зависимости:
+activeresource, тестировалась на 3.0.10.
+rspec для тестов
+
+Пример использования:
+# Задание Api Key и Referer
+YandexUslugiWrapper.api_key = "YOUR API KEY"
+YandexUslugiWrapper.referer = "YOUR REFERER"
+
+# Поиск всех банков из Уфы
+YandexUslugiWrapper::Bank.all :region => "Уфа"
+
+# Поиск банка с id = 90 из Уфы
+id = 90
+YandexUslugiWrapper::Bank.find id, :region => "Уфа"
+
+# Возвращает информацию о вкладах, доступных в указанном регионе и соответствующих параметрам запроса
+YandexUslugiWrapper::Deposit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
+
+# В качестве параметров хэша для метода search можно передать всё то, что указано в документации к API Яндекс Услуг
+YandexUslugiWrapper::Autocredit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
+
+id = 8230
+YandexUslugiWrapper::Autocredit.find id
+YandexUslugiWrapper::Deposit.find id
+
+
+Тестирование:
+Необходимо добавить свои Api key и Referer в spec_helper.rb
 
 == Contributing to yandex_uslugi
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
@@ -15,6 +45,6 @@
 
 == Copyright
 
-Copyright (c) 2011 Idris. See LICENSE.txt for
+Copyright (c) 2011 Malgini. See LICENSE.txt for
 further details.
 
