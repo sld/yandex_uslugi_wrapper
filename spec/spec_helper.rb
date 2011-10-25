@@ -1,7 +1,5 @@
 require 'yandex_uslugi_wrapper'
+require 'api_and_referer'
 
 include YandexUslugiWrapper
-
-REFERER  = "Your referer"
-API_KEY = "Your api key"
 

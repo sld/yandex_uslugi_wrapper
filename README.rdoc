@@ -32,7 +32,7 @@ rspec для тестов
 
 == Тестирование:
 
-Необходимо добавить свои Api key и Referer в spec_helper.rb
+Необходимо добавить свои Api key и Referer в spec/api_and_referer.rb
 
 == Copyright
 
