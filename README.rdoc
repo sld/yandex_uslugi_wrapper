@@ -4,16 +4,27 @@
 Предоставляет основные функции поиска по id и по параметрам для банковских услуг.
 
 == Зависимости
-activeresource, тестировалась на 3.0.10.
-rspec для тестов
+* activeresource (>= 3.0.10), возможно будет работать и на ранних версиях
+* rspec для тестов
 
-== Пример использования:
+== Установка
+  gem install yandex_uslugi_wrapper
+
+== Использование
+  require 'yandex_uslugi_wrapper'
+
   # Задание Api Key и Referer
   YandexUslugiWrapper.api_key = "YOUR API KEY"
   YandexUslugiWrapper.referer = "YOUR REFERER"
 
   # Поиск всех банков из Уфы
-  YandexUslugiWrapper::Bank.all :region => "Уфа"
+  ufa_banks = YandexUslugiWrapper::Bank.all :region => "Уфа"
+  # Получение первого элемента из массива
+  ufa_bank_first = ufa_banks.first
+  # Вывод имени сайта первого банка
+  puts ufa_bank_first.name #=> Имя первого банка
+  puts ufa_bank_first.link #=> Ссылки для первого банка
+
 
   # Поиск банка с id = 90 из Уфы
   id = 90

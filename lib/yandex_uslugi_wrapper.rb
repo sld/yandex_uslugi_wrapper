@@ -17,11 +17,11 @@ module YandexUslugiWrapper
     YandexUsluga.api_key
   end
 
-  def referer
+  def self.referer
     YandexUsluga.referer
   end
 
-  def referer=(referer_site)
+  def self.referer=(referer_site)
     YandexUsluga.referer = referer_site
   end
 
