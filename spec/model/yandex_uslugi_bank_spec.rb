@@ -3,8 +3,8 @@ require 'spec_helper'
 describe "Yandex uslugi bank spec" do
   before( :each ) do
     @required_search_options = {:region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"}
-    YandexUsluga.api_key = API_KEY
-    YandexUsluga.referer = REFERER
+    YandexUslugiWrapper.api_key = API_KEY
+    YandexUslugiWrapper.referer = REFERER
   end
 
   it "should return that the yandex uslugi api header is equal to the bank header" do
