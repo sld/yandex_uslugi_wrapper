@@ -1,16 +1,18 @@
-= yandex_uslugi
+= yandex_uslugi_wrapper
 
 Данный Gem является оберткой над {API Яндекс Услуг}[http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml].
 Предоставляет основные функции поиска по id и по параметрам для банковских услуг.
 
-== Зависимости
+== Работа проверялась на
+* ruby 1.8.7 -p352
 * activeresource (>= 3.0.10), возможно будет работать и на ранних версиях
-* rspec для тестов
+* rspec 2.7.0 для тестов
 
 == Установка
   gem install yandex_uslugi_wrapper
 
 == Использование
+  require 'rubygems'
   require 'yandex_uslugi_wrapper'
 
   # Задание Api Key и Referer

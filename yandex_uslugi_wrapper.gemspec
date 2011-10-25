@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
     "spec/model/yandex_uslugi_bank_spec.rb",
     "spec/model/yandex_uslugi_wrapper_spec.rb",
     "spec/spec_helper.rb",
-    "yandex_uslugi_api_wrapper.gemspec"
+    "yandex_uslugi_wrapper.gemspec"
   ]
   s.homepage = "http://github.com/sld/yandex_uslugi"
   s.licenses = ["MIT"]

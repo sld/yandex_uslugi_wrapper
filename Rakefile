@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "yandex_uslugi_wrapper"
-  gem.homepage = "http://github.com/sld/yandex_uslugi"
+  gem.homepage = "http://github.com/sld/yandex_uslugi_wrapper"
   gem.license = "MIT"
   gem.summary = "Yandex Uslugi Api Wrapper"
   gem.description = "Yandex Uslugi Api Wrapper on Ruby.\n
