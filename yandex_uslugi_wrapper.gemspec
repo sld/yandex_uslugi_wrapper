@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "yandex_uslugi_wrapper.gemspec"
   ]
-  s.homepage = "http://github.com/sld/yandex_uslugi"
+  s.homepage = "http://github.com/sld/yandex_uslugi_wrapper"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
