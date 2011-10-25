@@ -21,7 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = "Yandex Uslugi Api Wrapper on Ruby.\n
                      More info about Api on http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml"
   gem.email = "sld7700@gmail.com"
-  gem.authors = ["Malgini"]
+  gem.authors = ["sld7700"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

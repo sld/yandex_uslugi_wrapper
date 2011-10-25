@@ -1,50 +1,41 @@
 = yandex_uslugi
 
-Данный Gem является оберткой над API Яндекс Услуг - http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml.
+Данный Gem является оберткой над {API Яндекс Услуг}[http://api.yandex.ru/uslugi/doc/banks-dg/concepts/about.xml].
 Предоставляет основные функции поиска по id и по параметрам для банковских услуг.
 
-Зависимости:
+== Зависимости
 activeresource, тестировалась на 3.0.10.
 rspec для тестов
 
-Пример использования:
-# Задание Api Key и Referer
-YandexUslugiWrapper.api_key = "YOUR API KEY"
-YandexUslugiWrapper.referer = "YOUR REFERER"
+== Пример использования:
+  # Задание Api Key и Referer
+  YandexUslugiWrapper.api_key = "YOUR API KEY"
+  YandexUslugiWrapper.referer = "YOUR REFERER"
 
-# Поиск всех банков из Уфы
-YandexUslugiWrapper::Bank.all :region => "Уфа"
+  # Поиск всех банков из Уфы
+  YandexUslugiWrapper::Bank.all :region => "Уфа"
 
-# Поиск банка с id = 90 из Уфы
-id = 90
-YandexUslugiWrapper::Bank.find id, :region => "Уфа"
+  # Поиск банка с id = 90 из Уфы
+  id = 90
+  YandexUslugiWrapper::Bank.find id, :region => "Уфа"
 
-# Возвращает информацию о вкладах, доступных в указанном регионе и соответствующих параметрам запроса
-YandexUslugiWrapper::Deposit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
+  # Возвращает информацию о вкладах, доступных в указанном регионе и соответствующих параметрам запроса
+  YandexUslugiWrapper::Deposit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
 
-# В качестве параметров хэша для метода search можно передать всё то, что указано в документации к API Яндекс Услуг
-YandexUslugiWrapper::Autocredit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
+  # В качестве параметров хэша для метода search можно передать всё то, что указано в документации к API Яндекс Услуг
+  YandexUslugiWrapper::Autocredit.search :region => "Уфа", :currency => "RUB", :sum => 55555, :period => "3 years"
 
-id = 8230
-YandexUslugiWrapper::Autocredit.find id
-YandexUslugiWrapper::Deposit.find id
+  id = 8230
+  YandexUslugiWrapper::Autocredit.find id
+  YandexUslugiWrapper::Deposit.find id
 
 
-Тестирование:
+== Тестирование:
+
 Необходимо добавить свои Api key и Referer в spec_helper.rb
-
-== Contributing to yandex_uslugi
-
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 == Copyright
 
-Copyright (c) 2011 Malgini. See LICENSE.txt for
+Copyright (c) 2011. See LICENSE.txt for
 further details.
 

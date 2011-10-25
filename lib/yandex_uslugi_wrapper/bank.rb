@@ -5,8 +5,9 @@ module YandexUslugiWrapper
   # Обязательным, при запросе Банков, является использование region
   class Bank < YandexUsluga
     # Поиск всех банков из региона
-    # Bank.all :region => "Уфа"
-    # Bank.all :params => { :region => "Уфа" }
+    # === Example
+    #  Bank.all :region => "Уфа"
+    #  Bank.all :params => { :region => "Уфа" }
     def self.all region
       unless region[:params]
         super :params => region
@@ -16,8 +17,9 @@ module YandexUslugiWrapper
     end
 
     # Поиск банка с определенным id
-    # Bank.find 90, :region => "Уфа"
-    # Bank.find 90, :params => { :region => "Уфа" }
+    # === Example
+    #  Bank.find 90, :region => "Уфа"
+    #  Bank.find 90, :params => { :region => "Уфа" }
     def self.find id, region
       unless region[:params]
         super id, :params => region
