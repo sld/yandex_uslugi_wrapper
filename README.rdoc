@@ -45,7 +45,7 @@
 
 
 
-== Тестирование:
+== Тестирование
 
 Необходимо добавить свои Api key и Referer в spec/api_and_referer.rb
 
